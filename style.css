@@ -5,62 +5,149 @@ body{color:#072b65}.top{min-height:168px;padding:4px clamp(16px,2.5vw,46px);gap:
 @media(max-width:900px){.top{min-height:auto}.identity h1{white-space:normal}.topright{justify-content:space-between;flex-wrap:wrap}.hero{height:auto;min-height:490px}.heroText{width:72%;min-height:490px}.heroVisual{left:25%}.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:620px){.top{padding:10px 13px}.identity{gap:10px}.identity img{width:86px;height:95px;padding-right:8px}.identity strong{font-size:31px}.identity h1{font-size:15px}.identity em{font-size:10px}.topright{gap:10px}.socialtop a{width:28px;height:28px;font-size:18px}.topactions{gap:6px}.topactions .btn{font-size:12px;padding:10px 9px}.nav{padding:0 5px}.nav a{padding:13px 10px}.hero{min-height:530px}.heroVisual{inset:0;background-position:65% center;opacity:.66}.hero:before{background:linear-gradient(90deg,#002746ef 0%,#002b4dd6 68%,#002b4d6b)}.heroText{width:100%;min-height:530px;padding:24px 18px}.hero h2{font-size:36px}.hero p{font-size:16px;max-width:430px}.hero .btn{font-size:13px;padding:12px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));padding:12px;gap:9px}.action{min-height:175px}.action .emoji{font-size:38px}.benefits{justify-content:flex-start}.benefits b{width:100%}}
 
-/* CORRECTIONS POUR TELEPHONES */
+/* A.P.P.L. - Version mobile corrigee */
 @media screen and (max-width: 768px) {
 
-  /* Eviter le debordement horizontal */
   html, body {
+    width: 100%;
     max-width: 100%;
     overflow-x: hidden;
   }
 
-  /* Adapter les images */
-  img {
-    max-width: 100%;
-    height: auto;
+  /* En-tete */
+  .top {
+    padding: 12px;
+    gap: 12px;
   }
 
-  /* Bannière : image au-dessus du texte */
+  .identity {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .identity img {
+    width: 85px;
+    height: 90px;
+    object-fit: contain;
+  }
+
+  .identity strong {
+    font-size: 30px;
+  }
+
+  .identity h1 {
+    font-size: 15px;
+    white-space: normal;
+  }
+
+  .identity em {
+    font-size: 11px;
+    white-space: normal;
+  }
+
+  .topright {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .topactions {
+    flex-wrap: wrap;
+  }
+
+  /* Navigation defilante */
+  .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  /* Bannière : photo visible au-dessus */
   .hero {
     display: flex;
     flex-direction: column;
     height: auto;
     min-height: 0;
+    background: #06345e;
   }
 
-  .hero img {
+  .heroVisual {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: 250px;
+    flex-shrink: 0;
+    background-image: url('assets/hero-reference.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #eaf3ed;
+    opacity: 1;
+    z-index: 0;
+  }
+
+  .hero::before {
+    display: none;
+  }
+
+  /* Texte sous la photo */
+  .heroText {
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: auto;
-    object-fit: contain;
-    object-position: center;
+    min-height: 0;
+    padding: 24px 18px 35px;
   }
 
-  /* Texte de la bannière */
-  .hero h1 {
+  .hero h2 {
     font-size: clamp(28px, 8vw, 38px);
     line-height: 1.15;
   }
 
   .hero p {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.55;
   }
 
-  /* Menus */
-  nav {
-    max-width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+  .hero .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
-  /* Cartes */
-  .cards, .features-grid {
+  .hero .btn {
+    font-size: 14px;
+    padding: 12px 15px;
+  }
+
+  .heroDots {
+    display: none;
+  }
+
+  /* Domaines d'action */
+  .cards {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 12px;
   }
-}
 
-@media screen and (max-width: 420px) {
-  .cards, .features-grid {
-    grid-template-columns: 1fr;
+  .action {
+    min-height: 0;
+    padding: 15px 9px;
+  }
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }
