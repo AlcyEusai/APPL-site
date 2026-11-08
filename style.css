@@ -4,3 +4,63 @@ body{color:#072b65}.top{min-height:168px;padding:4px clamp(16px,2.5vw,46px);gap:
 @media(max-width:1450px){.top{flex-wrap:wrap;padding:10px 25px}.topright{width:100%;justify-content:flex-end}.identity img{height:130px;width:160px}.identity em{white-space:normal}.nav{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start}.heroText{width:54%}.heroVisual{left:34%}}
 @media(max-width:900px){.top{min-height:auto}.identity h1{white-space:normal}.topright{justify-content:space-between;flex-wrap:wrap}.hero{height:auto;min-height:490px}.heroText{width:72%;min-height:490px}.heroVisual{left:25%}.cards{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:620px){.top{padding:10px 13px}.identity{gap:10px}.identity img{width:86px;height:95px;padding-right:8px}.identity strong{font-size:31px}.identity h1{font-size:15px}.identity em{font-size:10px}.topright{gap:10px}.socialtop a{width:28px;height:28px;font-size:18px}.topactions{gap:6px}.topactions .btn{font-size:12px;padding:10px 9px}.nav{padding:0 5px}.nav a{padding:13px 10px}.hero{min-height:530px}.heroVisual{inset:0;background-position:65% center;opacity:.66}.hero:before{background:linear-gradient(90deg,#002746ef 0%,#002b4dd6 68%,#002b4d6b)}.heroText{width:100%;min-height:530px;padding:24px 18px}.hero h2{font-size:36px}.hero p{font-size:16px;max-width:430px}.hero .btn{font-size:13px;padding:12px}.cards{grid-template-columns:repeat(2,minmax(0,1fr));padding:12px;gap:9px}.action{min-height:175px}.action .emoji{font-size:38px}.benefits{justify-content:flex-start}.benefits b{width:100%}}
+
+/* CORRECTIONS POUR TELEPHONES */
+@media screen and (max-width: 768px) {
+
+  /* Eviter le debordement horizontal */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  /* Adapter les images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Bannière : image au-dessus du texte */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 0;
+  }
+
+  .hero img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  /* Texte de la bannière */
+  .hero h1 {
+    font-size: clamp(28px, 8vw, 38px);
+    line-height: 1.15;
+  }
+
+  .hero p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* Menus */
+  nav {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Cartes */
+  .cards, .features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .cards, .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
