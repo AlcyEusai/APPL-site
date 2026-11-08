@@ -1,0 +1,60 @@
+{
+  "organisation": "Association Paysans Puits-Laurant",
+  "sigle": "A.P.P.L.",
+  "lieu": "Puits-Laurant, 9e section communale d’Aquin, Haïti",
+  "titre": "Solidarité et développement durable à Puits-Laurant",
+  "presentation": "L’A.P.P.L. souhaite soutenir les communautés rurales à travers l’accès à l’eau, l’agriculture, l’environnement et la solidarité envers les personnes vulnérables.",
+  "email": "",
+  "telephone": "",
+  "facebook": "",
+  "youtube": "",
+  "linkedin": "",
+  "tiktok": "",
+  "don_url": "",
+  "actions": [
+    {
+      "titre": "Accès à l’eau",
+      "description": "Projets de construction et de réhabilitation de puits et systèmes d’eau.",
+      "icone": "💧"
+    },
+    {
+      "titre": "Agriculture",
+      "description": "Soutien aux agriculteurs et à la production locale.",
+      "icone": "🌱"
+    },
+    {
+      "titre": "Environnement",
+      "description": "Protection des ressources naturelles et reboisement.",
+      "icone": "🌿"
+    },
+    {
+      "titre": "Inclusion des personnes handicapées",
+      "description": "Appui matériel, social et économique.",
+      "icone": "♿"
+    },
+    {
+      "titre": "Aide aux personnes vulnérables",
+      "description": "Soutien alimentaire, sanitaire et accompagnement social.",
+      "icone": "🤝"
+    },
+    {
+      "titre": "Faire un don / Soutenir",
+      "description": "Contribuez à nos projets et à l’aide humanitaire dans la communauté.",
+      "icone": "❤️"
+    }
+  ],
+  "projets": [
+    {
+      "titre": "Accès à l’eau potable",
+      "statut": "Projet envisagé",
+      "description": "Mobilisation de partenaires pour améliorer l’accès à l’eau."
+    },
+    {
+      "titre": "Solidarité communautaire",
+      "statut": "Projet envisagé",
+      "description": "Collecte de nourriture, matériel d’assistance et fournitures."
+    }
+  ],
+  "actualites": [],
+  "galerie": []
+}
